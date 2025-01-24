@@ -91,19 +91,16 @@
     <div class="container">
         <h1>Recommendation of Similar Titles</h1>
 
-  
         <form method="POST" action="/recommend">
             <label for="title">Enter a Title</label>
-            <input type="text" id="title" name="title" required>
+            <input type="text" id="title" name="title" required autocomplete="off">
             <button type="submit">Recommend</button>
         </form>
 
-        
         {% if error %}
             <p class="error">{{ error }}</p>
         {% endif %}
 
-        
         {% if recommendations %}
             <div class="recommendations">
                 <h2>Recommendations Based on Your Choice "{{ title }}":</h2>
@@ -117,5 +114,3 @@
     </div>
 </body>
 </html>
-
-
